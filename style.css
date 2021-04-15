@@ -1,0 +1,112 @@
+nav{ /*kod nawigacji*/
+    width: 100%;
+    height: 60px;
+    background-color: #473d8b9d;
+    color: white;
+    font-weight: 600;/*grubość czcionki*/
+    backdrop-filter: saturate(180%) blur(20px);/*rozmycie tła*/
+    position: sticky; /* przykleja element*/
+    top: 0; /*pozycja na stronie*/
+}
+a{ 
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.wrap{
+    max-width: 1000px; /*max szerokość elementów*/
+    margin: 0 auto;
+    display: flex; /*ustawia elementy obok siebie*/
+    justify-content: space-between;
+    line-height: 60px;
+}
+.itemwrap{
+    display: flex;/*ustawia wyrazy obok siebie*/
+}
+@media(max-width: 500px){
+    .itemwrap{
+        display: none;
+    }
+}
+.item{
+    padding: 0 30px;/*1 cyferka gora-dol a 2 cyferka prawo-lewo*/
+}
+.logo{
+padding: 0 30px;
+}
+/* kod ogólny */
+body{
+    margin: 0; /*margines zewnętrzny*/
+    padding: 0; /*margines wewnętrzny*/
+}
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+/* głowny obrazek */
+header{
+    margin-top: -60px;
+    width: 100%;
+    height: 550px;
+    background-image: url("kemp.jpg"); /* wstawia obrazek */
+    background-repeat: no-repeat; /*usuwa powtarzanie*/
+    background-size: cover; /* wypełnia cały element obrazkiem*/
+    background-position: top;/*pozycja zdjęcia*/
+}
+/* blog */
+main{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.postlist{
+    display: grid; /*wyświetla w siatce*/
+    grid-template-columns: repeat(3,1fr); /*definicja kolumn*/
+    grid-gap: 24px;
+}
+@media(max-width: 500px){
+    .postlist{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+}
+@media(max-width: 700px) and (min-width: 500px){
+    .postlist{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+article>img{
+    width: 100%; /*styluje coś w czymś*/
+    height: 180px;
+    object-fit: cover;
+}
+article{
+    box-shadow: 10px 10px 15px 0 #0000001a;
+}
+.text>.category{
+    color: teal;
+    font-weight: 600;
+    margin: 0;
+}
+.text>h3{
+    color: black;
+}
+.authortext>p{
+    color: black;
+    margin: 0;
+}
+.author{
+    display: flex;
+}
+.author>img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+.text{
+    padding: 24px;
+}
+main>h2{
+    text-align: center;
+}
+
